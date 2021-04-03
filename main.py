@@ -18,7 +18,7 @@ hojad['D2'] = "Ok!... entonces cantaremos los pollitos"
 
 deimer.save('excel_deimer.xlsx')
 
-#otra forma de leer archivos
+#Ahora vamos a leer el archivo
 from openpyxl import load_workbook
 
 deimer= load_workbook('excel_deimer.xlsx')
@@ -26,11 +26,10 @@ deimer= load_workbook('excel_deimer.xlsx')
 #Crea otra hoja de calculo en el mismo archivo de excel
 canciones=deimer.create_sheet('canciones')
 
-
 deimer.save('excel_deimer.xlsx')
 
 
-#Ahora vamos a leer el archivos
+#otra forma de leer archivos
 deimer = openpyxl.load_workbook('excel_deimer.xlsx')
 
 #value nos permite visualizar lo que se encuentra en dicha fila 
