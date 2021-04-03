@@ -25,11 +25,13 @@ deimer = openpyxl.load_workbook('excel_deimer.xlsx')
 deimer= load_workbook('excel_deimer.xlsx')
 
 #Crea otra hoja de calculo en el mismo archivo de excel
-canciones=deimer.create_sheet('Hoja1')
-bailes=deimer.create_sheet('Hoja2',0)
-discotecas=deimer.create_sheet('Hoja3',-1)
- 
-#Vamos a cambiar el nombre de la hoja
-#canciones.titles('NuevasCanciones')
+canciones=deimer.create_sheet('canciones')
+bailes=deimer.create_sheet('bailes',0)
+discotecas=deimer.create_sheet('discotecas',-1)
 
-deimer.save('excel_deimer.xlsx')
+#value nos permite visualizar lo que se encuentra en dicha fila 
+print(hojad['A1'].value)
+print(hojad['B1'].value)
+print(hojad['C1'].value)
+print(hojad['D1'].value)
+
