@@ -18,6 +18,18 @@ hojad['D2'] = "Ok!... entonces cantaremos los pollitos"
 
 deimer.save('excel_deimer.xlsx')
 
+#otra forma de leer archivos
+from openpyxl import load_workbook
+
+deimer= load_workbook('excel_deimer.xlsx')
+
+#Crea otra hoja de calculo en el mismo archivo de excel
+canciones=deimer.create_sheet('canciones')
+
+
+deimer.save('excel_deimer.xlsx')
+
+
 #Ahora vamos a leer el archivos
 deimer = openpyxl.load_workbook('excel_deimer.xlsx')
 
@@ -27,12 +39,4 @@ print(hojad['B1'].value)
 print(hojad['C1'].value)
 print(hojad['D1'].value)
 
-#volvemos a abrir el archivo
-deimer = openpyxl.load_workbook('excel_deimer.xlsx')
 
-#Crea otra hoja de calculo en el mismo archivo de excel
-canciones=deimer.create_sheet('canciones')
-bailes=deimer.create_sheet('bailes',0)
-discotecas=deimer.create_sheet('discotecas',-1)
-
-deimer.save('excel_deimer.xlsx')
