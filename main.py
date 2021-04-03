@@ -27,11 +27,8 @@ print(hojad['B1'].value)
 print(hojad['C1'].value)
 print(hojad['D1'].value)
 
-
-#otra forma de leer archivos
-from openpyxl import load_workbook
-
-deimer= load_workbook('excel_deimer.xlsx')
+#volvemos a abrir el archivo
+deimer = openpyxl.load_workbook('excel_deimer.xlsx')
 
 #Crea otra hoja de calculo en el mismo archivo de excel
 canciones=deimer.create_sheet('canciones')
